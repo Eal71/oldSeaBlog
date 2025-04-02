@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+html::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../images/背景.jpeg);
+    background-size: cover; /* 让背景图覆盖整个容器 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 防止背景图重复 */
+}
+
+::selection {
+    color: #fff;
+    background-color: rgb(144,129,241);
+}
+
+.box {
+    display: flex;
+    overflow: hidden;
+    width: 90rem;
+    height: 55rem;
+    background-color: rgba(255,255,255,80%);
+    border-radius: 1.5rem;
+    margin: 10% auto;
+    box-shadow: 0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+
+.box .left {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    color: #f6f6f6;
+    background-color:skyblue;
+
+}
+
+.box .left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../images/背景.jpeg);
+}
+
+.box .right {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box .right h4 {
+    color: rgb(144,129,241);
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+.box .right form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.box .right form .acc {
+    outline: none;
+    width: 80%;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    padding: 1rem 0 0 1.6rem;
+    border: none;
+    border-bottom: 1px solid rgb(144,129,241);
+    color: rgb(144,129,241);
+    background-color: rgba(0,0,0,0);
+}
+
+.box .right form .acc:focus {
+    outline: none;
+    color: rgb(144,129,241);
+    padding: 1rem 0 0 1.6rem;
+}
+
+.box .right form .help {
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 1.6rem;
+    margin-top: 0.5rem;
+}
+
+.box .right form .submit {
+    width: 60%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 3rem 0 0 50%;
+    transform: translateX(-50%);
+}
+
+.box .right form .submit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.box .right .fn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 70%;
+}
+
+.box .right .fn a {
+    margin-left: -5rem;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    color: #666;
+    text-decoration: none;
+}
+
+.box .right .fn a:hover {
+    color: rgb(144,129,241);
+}
+
+.box .right .terms {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+}
